@@ -1,0 +1,18 @@
+html {
+    font-size: 14px;
+}
+
+#grid-pagina {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "z-1 z-1 z-1"
+        "z-5 z-6 z-7"
+        "z-3 z-2 z-2 "
+        "z-4 z-2 z-2"
+        "z-8 z-8 z-8"
+}
+body {
+    padding: 1.5px;
+  }
+
+  

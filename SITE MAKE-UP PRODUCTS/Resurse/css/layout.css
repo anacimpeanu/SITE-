@@ -1,0 +1,76 @@
+/*ETAPA 2*/
+/*TASK 1 --SCHEMA CROMATICA--*/
+
+body{
+    --text_color:black;
+    --grid_background: black;
+    --main_color:#F7DAC8;
+    --highlight_color:#D6B7AE;
+    --nude1:#ECCCCA;
+    --nude2:#eee1d8;
+    --pink1:#cb5d82;
+    background-color: black;
+    padding: 2px;
+}
+
+header{
+    background-color: black;
+}
+main{
+    background-color: var(--main_color);
+}
+footer{
+    background-color: black;
+}
+
+/*LAYOUT*/
+
+
+#grid-pagina{
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "z-1 z-1 z-1 z-1"
+                         "z-5 z-6 z-6 z-7"
+                         "z-3 z-3 z-2 z-2"
+                         "z-4 z-4 z-2 z-2"
+                         "z-8 z-8 z-8 z-8"
+
+    
+}
+#grid-pagina>*{
+    border:0.5px solid black;
+}
+#zona1{
+    grid-area: z-1;
+}
+#zona2{
+    grid-area: z-2;
+    background-color: var(--nude2);
+}
+#zona3{
+    grid-area: z-3;
+    background-color: var(--nude2);
+}
+#zona4{
+    grid-area: z-4;
+    background-color: var(--nude2);
+}
+#zona5{
+    grid-area: z-5;
+    background-color: var(--nude2);
+}
+#zona6{
+    grid-area: z-6;
+    background-color: var(--nude2);
+}
+#zona7{
+    grid-area: z-7;
+    background-color: var(--nude2);
+}
+#zona8{
+    grid-area: z-8;
+}
+  
+
+  

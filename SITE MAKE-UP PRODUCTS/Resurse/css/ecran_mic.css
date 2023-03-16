@@ -1,0 +1,12 @@
+html {
+    font-size: 12px;
+}
+
+#grid-pagina {
+    grid-gap: 5px;
+    display: block;
+    /*afisate pe rand pe o singura coloana in ordinea din html*/
+}
+body {
+    padding: 1px;
+  }
