@@ -1,0 +1,82 @@
+html {
+    font-size: 14px;
+}
+
+#grid-pagina {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "z-1 z-1 z-1"
+        "z-5 z-6 z-7"
+        "z-3 z-2 z-2 "
+        "z-4 z-2 z-2"
+        "z-8 z-8 z-8"
+}
+body {
+    padding: 1.5px;
+  }
+
+  .coloana-video{
+    float: left;
+    width: 55%;
+    height: 55%;
+    max-width: ch;
+    max-height: ch; /*ch este o unitate speciala de masura care este echivalenta cu 16px*/
+    position: relative;
+    
+   
+}
+
+/*butoane*/
+.coloana-video1{
+    float: left;
+    width: 14%;
+    padding: 5px;
+}
+
+
+.rand-video::after{
+    margin-bottom: 50px;
+    content: "";
+    clear: both;
+    display: table;
+}
+.container1{
+    float: left;
+    width: 70%;
+    height: 50%; 
+  }
+img{
+    min-width: 30%;
+    min-height: 30%;
+}
+
+.container1{
+    float: left;
+    width: 50%;
+    height: 50%; 
+  }
+  .tabs1{
+      max-width: 80%;
+      padding-top: 35.25%;
+      position: relative;
+      width: 70%;
+  }
+  
+  .tabs1 {
+      max-width: 80%;
+      padding-top: 60%;
+      position: relative;
+      width: 70%;
+    overflow: hidden;
+    margin-bottom: -120px;
+  }
+  
+  .tabs1 iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    overflow: auto;
+    margin-bottom: -300px;
+  }
