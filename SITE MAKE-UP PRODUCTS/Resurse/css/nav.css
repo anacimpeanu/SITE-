@@ -1,11 +1,16 @@
-/*meniu dinamic */
+#hamburger,
+#ch-menu {
+  display: none;
+}
+
 body{
-    --inaltime-meniu: 20px;
+    --inaltime-meniu: 40px;
     --latime-buton: 311.5px;
     --culoare-meniu: black;
     --culoare-meniu-selectat:#D6B7AE;
     --latime-bord-meniu: 1px;
 }
+
 ul.meniu{
     display:flex;
     padding: 0;
@@ -15,6 +20,7 @@ ul.meniu{
 ul.meniu li a{
     display: block;
     height: 100%;
+    
 }
 ul.meniu>li{
     height:var(--inaltime-meniu);
@@ -24,6 +30,7 @@ ul.meniu>li{
     border:var(--latime-bord-meniu) solid black;
     width: var(--latime-buton);
     text-align: center;
+    
 }
 ul.meniu div{
     color:var(--main_color);
@@ -36,11 +43,14 @@ ul.meniu div{
     0 0 var(--main_color);
   overflow: hidden;
   transition: 0.7s;
+  
 }
 ul.meniu>li:hover div{
     text-shadow: 
     0 0 var(--main_color), 
     0 1.2em #a24979;
+    
+    
 }
 ul.meniu ul{
     list-style-type: none;
@@ -50,6 +60,8 @@ ul.meniu ul{
     margin: 0;
     transform: scaleY(0);
     transform-origin: 0 0;
+    overflow: hidden;
+    
 }
 
 ul.meniu>li:hover ul{
@@ -58,16 +70,23 @@ ul.meniu>li:hover ul{
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    
 }
 ul.meniu ul li{
     height: var(--inaltime-meniu);
-   
     border:var(--latime-bord-meniu) solid black;
     width: var(--latime-buton);
+    text-decoration: 2px underline transparent;
+    transition: text-decoration 700ms linear;
+
+}
+ul.meniu ul li:hover{
+    text-decoration: 2px underline white;
 }
 
 ul.meniu li a:hover, ul.meniu li div:hover{
-    background-color: var(--culoare-meniu-selectat);
+    background-color: var(--culoare-meniu-selectat);  
+     
 }
 ul.meniu>li:hover{
     overflow: visible;
@@ -82,270 +101,16 @@ ul.meniu>li:hover{
         transform: text-shadow scaleY(1);
     }
 }
+
 ul.meniu a,ul.meniu div{
     background-color: var(--culoare-meniu);
     cursor: pointer;
     font-weight: bold;
     color:var(--main_color);
     text-decoration: none;
-}
-
-
-
-/*task tabel*/
-    table {
-        margin: auto;
-        border-collapse:separate;
-        border:solid black 1px;
-        border-radius:6px;
-        -moz-border-radius:6px;
-    }
-.par{
-    background-color: var(--nude1);
-}
-.impar{
-    background-color: var(--highlight_color);
-}
-table td:hover{
-    background-color: rgb(224, 172, 181);
-}
-  
-td:hover {
-    background-color: #ce9398;
-    color: white;
-}
-
-td:hover ~ td {
-    background-color: #eaafc0;
-}
-
-#container_tabel {
-    overflow-x: auto; /* seteaza scrollbarul orizontal */
-    max-width: 100%;
-}
-caption { 
-    display: table-caption;
-    caption-side:bottom;
-    text-align: center;
     
-  }
-
-
-
-/* task link-top */
-.link-top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    rotate:-45deg;
-    background-color: #e09bb1;
-    transition: background-color 0.3s ease-out;
-    opacity: 0.8;
-    z-index: 9999;
-    text-decoration: none;
-    border: 2px solid purple;
-    opacity: 0.3;
-  }
-  
-  /* triunghiul */
-  .triangle {
-    bottom: 11.5px;
-    right:  11.5px;
-    border-radius: 75px 75px;
-    position: absolute;
-    rotate:-45deg;
-    line-height: 10;
-    border-style: solid;
-    border-width: 20px 0 20px 30px;
-    border-color: transparent transparent transparent  #d68e8e;
-  }
-  
-  /* textul tooltip-ului */
-  .tooltip {
-    position: absolute;
-    rotate: 45deg;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    color: #000000;
-    padding: 6px 12px;
-    font-size: 12px;
-
-    border-radius: 3px;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
-  
-  /* efectul de hover */
-  .link-top:hover {
-    background-color: #ecb2b2;
-    opacity: 1;
-    border-color: #f591ad;
-    opacity: 1;
-  }
-  
-  .link-top:hover .triangle {
-    border-color: transparent transparent transparent #fff;
-  }
-  
-  .link-top:hover .tooltip {
-    opacity: 1;
-  }
-#top{
-    overflow: hidden;
-    animation: animate 2s linear forwards;
 }
 
-/*task iframe*/
-
-.container {
-    display: flex;
-    flex-direction: column;
-    transition: all 100ms linear;
-  }
-  
-  .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    transition: all 100ms linear;
-  }
-  
-  .links a {
-    display: block;
-    width: 120px;
-    height: 40px;
-    margin-bottom: 2px;
-    background-color: #eee1d8;
-    color:  var(--highlight_color);
-    text-align: center;
-    line-height: 30px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    text-decoration: none;
-    border: 5px solid var(--highlight_color);
-  }
-  
-  .links a:hover {
-    background-color: var(--highlight_color);
-    color: black;
-  }
-  
-  .tabs {
-    flex: 0;
-    z-index: 0;
-    margin-bottom: -350px;
-  }
-  
-  iframe {
-    width: 50%;
-    height: 50%;
-    border: none;
-    float:none;
-    overflow: hidden;
-    border-style:groove;
-    border-color: var(--highlight_color);
-    position:absolute;
-    margin-bottom: -70px;
-  }
-  
-  .tabs {
-	max-width: 80%;
-	padding-top: 80.25%;
-	position: relative;
-	width: 70%;
-    overflow: hidden;
+#casuta{
+  display: none;
 }
-
-.tabs iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50%;
-    overflow: auto;
-    margin-bottom: -100px;
-}
-
-
-
-.coloana-video{
-    float: left;
-    width: 70%;
-    height: 50%;
-    
-   
-}
-
-/*butoane*/
-.coloana-video1{
-    float: left;
-    width: 10%;
-    padding: 5px;
-}
-
-
-.rand-video::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/*Task font */
-  
-@font-face {
-    font-family: customFont;
-    src: url(font/Prompt-Italic.ttf);
-}
-h1{
-    font-family: customFont;
-    color: var(--highlight_color);
-}
-/*Animatie de scriere in timp real pentru text*/
-h1:first-of-type {
-    font-size: 36px;
-    margin-bottom: 20px;
-    white-space: nowrap; /*oprește textul */
-    overflow: hidden; /* ascunde orice text care nu incape*/
-    animation: typing 4s steps(48) forwards;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-/*Task icons schimbare culoare*/
- #icons{
-    color: white;
- }
-  
-
- /*BONUS II*/
- /* Selectăm toate elementele math */
-math {
-    font-size: 1.2rem; /* marimea fontului */
-    line-height: 1.5; /* inaltimea liniei */
-  }
-  
-  /* Stilizăm elementele "mi" (variabilele) din formulă */
-  math mi {
-    font-style: italic; /* font italic */
-    color: rgb(95, 33, 43); /* culoare albastră */
-  }
-  
-  /* Stilizăm elementele "mn" (numere) din formulă */
-  math mn {
-    font-weight: bold; /* font bold */
-    color: red; /* culoare roșie */
-  }
-  
-  /* Stilizăm elementele "mo" (operatori) din formulă */
-  math mo {
-    font-weight: bold; /* font bold */
-    color:rgb(216, 92, 113); /* culoare verde */
-  }
-  
-
-  
