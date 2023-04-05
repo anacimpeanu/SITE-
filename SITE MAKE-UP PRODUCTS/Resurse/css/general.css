@@ -218,6 +218,7 @@ h1{
 font-family: customFont;
 color: var(--highlight_color);
 }
+
 /*Animatie de scriere in timp real pentru text*/
 h1:first-of-type {
 font-size: 36px;
@@ -300,3 +301,55 @@ overflow: auto;
 margin-bottom: -300px;
 }
 
+video {
+    max-width: 800px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+    min-height: 200px;
+    min-width: 250px;
+}
+
+
+video{
+    width: 100%;
+    max-width: 50rem;
+    min-width: 10rem;
+}
+
+::cue b {
+    font-weight: bold;
+  }
+  
+
+a{
+    color:white;
+  }
+
+a[href^="http"]::before {
+    content: "⮳";
+    font-size: 1.5em; /* 50% mai mare decât dimensiunea fontului linkului */
+  }
+
+a[href^="http"]:hover::before {
+    color: pink; /* culoarea când cursorul este deasupra */
+}
+
+a[href^="http"]{
+    background-image: radial-gradient(circle at center, #e9d8d4 0%,#e9d8d4 40%, transparent 80%, transparent 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+    transition: background-size 1s ease-in;
+  }
+  
+  /* Cresterea la 100% a imaginii de background la aducerea cursorului pe link */
+  a:hover {
+    background-size: 100%;
+  }
+  
+  /* Efectul de border la click pe un link */
+  a:active {
+    outline: 2px solid white;
+  }
+  
