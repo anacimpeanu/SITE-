@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+
+<head>
+    <title>KYRA COSMETICS</title>
+
+    <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
+    <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
+    <%- include("../fragmente/head.ejs") %>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .column {
+          float: left;
+          width: 50%;
+          padding: 5px;
+        }
+        
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+    </style>
+      
+</head>
+
+<body>
+
+    <%- include("../fragmente/header.ejs") %>
+    
+<main>
+    <div id="grid-pagina">
+        <section id="zona1">
+            <p>
+                Ip: <%- locals.ip %>
+            </p>
+            <p>Suma: <%- locals.a+locals.b %></p>
+            <img src="Resurse/img/KYRA COSMETICS (6).png" alt="KYRA COSMETICS" style="width: 100%">
+         </section>
+        <section id="zona2">
+             <br/>
+            <br/>
+            <div id="container_tabel">
+            <table class="tabel">
+                <caption>TOP SITE</caption>
+                <thead>
+                    <tr>
+                        <td class="par" colspan="4" style="text-align: center;">
+                            TOP PE SITE
+                         </td>
+                    </tr>
+                     <tr>
+                        <td class="impar">Produs</td>
+                        <td class="par">Pret</td>
+                        <td class="impar">Categorie</td>
+                        <td class="par">Rating Clienti</td>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td class="impar">Demachiant pro KYRA</td>
+                    <td class="par">100 ron </td>
+                    <td class="impar">Skincare</td>
+                    <td class="par">9.5</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="impar">Gloss Max 24H</td>
+                    <td class="par">80 ron </td>
+                    <td class="impar">Buze</td>
+                    <td class="par">9.7</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="impar">Rimel Waterproof 12H</td>
+                    <td class="par">150 ron </td>
+                    <td class="impar">Make-up</td>
+                    <td class="par">8.4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="impar">Ondulator gene</td>
+                    <td class="par">50 ron </td>
+                    <td class="impar">Accesorii make-up</td>
+                    <td class="par">9.3</td>
+                </tr>
+            </tfoot>
+            </table>
+            </div>
+         </section>
+         <section id="zona3">
+            <div class="text-box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quos nemo quod aut atque a quo explicabo ex reiciendis tempore error possimus ipsum hic magnam in iste cupiditate autem doloremque.</p>
+            </div>
+        </section>
+        <section id="zona4">
+            <div class="text-box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem totam, quod nobis laborum nesciunt natus aspernatur numquam accusantium beatae incidunt aut tempora enim labore maxime eos delectus voluptas illum cupiditate.</p>
+            </div>
+         </section>
+        <section id="zona5">
+             <h2>TEXT</h2>
+    </section>
+    <section id="zona6">
+        <h2>TEXT</h2>
+    </section>
+    <section id="zona7">
+        <h2>TEXT</h2>
+    </section>
+    <section id="zona8">
+        
+    <section id="noutati">
+        <h2>
+            Noutăți
+        </h2>
+        <video id="promo" controls autoplay loop poster="/Resurse/img/studio.png">
+            <source src="/resurse/video/promo.mp4" type="video/mp4">
+            <source src="/resurse/video/promo.mov" type="video/mov">
+            <track label="Romanian" kind="subtitles" srclang="ro" src="/resurse/video/subt-romana.vtt" default>
+            <track label="English" kind="subtitles" srclang="en" src="/resurse/video/subt-engleza.vtt">
+        </video>
+        <section>
+            <h3>Acoperire fără pete</h3>
+            <p>În această secțiune vei găsi cele mai noi informații despre noua pensulă de aplicare fond de ten 100% fabricata din materiale bio.</p>
+            <figure>
+                <div class="row">
+                <div class="colum">
+                <img src="/resurse/img/pensulafdt1" alt="Pensula fond de ten" title="Pensula fond de ten" class="responsive" style="max-width: 200px;height: auto;">
+                <img src="/resurse/img/fata.webp" alt="Pensula fond de ten" title="Pensula fond de ten" class="responsive" style="max-width: 200px;height: auto;">
+                <img src="/resurse/img/product.webp" alt="Pensula fond de ten" title="Pensula fond de ten" class="responsive" style="max-width: 200px;height: auto;">
+                <figcaption>Pensula fond de ten</figcaption>
+                </div>
+                </div>
+            </figure>
+            <details>
+                <summary>Detalii</summary>
+            <p>
+                <i><b>Pensula fond de ten <em>by Kyra Cosmetics</em></b></i> Vă prezentăm noul nostru instrument pentru machiaj, o pensulă de aplicat fond de ten, creată pentru a vă oferi un finisaj perfect și natural. Această pensulă este special concepută pentru a aplica fondul de ten cu precizie, uniformitate și fără a lăsa urme.
+            </p>
+            <p>
+                <i><b>Pensula noastră</b></i> este fabricată din păr sintetic de înaltă calitate, care se simte moale și neted pe piele. Vârful pensulei este rotunjit pentru a se potrivi perfect conturului feței, iar lungimea și densitatea periilor permit aplicarea uniformă a fondului de ten, acoperind imperfecțiunile și uniformizând textura pielii.Fondul de ten aplicat cu această pensulă va fi perfect uniform, fără denivelări sau linii vizibile, oferind un aspect natural și proaspăt pielii. Pensula poate fi folosită atât pentru fonduri de ten lichide, cât și pentru cele cremoase sau în pudră.
+            </p>
+            </details>
+        </section>
+        <section>
+            <h3>Radierea primăverii</h3>
+            <p>În această secțiune vei găsi cele mai noi informații despre noul blush <em>RADIANT BLUSH by KYRA COSMETICS</em></p>
+            <figure>
+                <div class="row">
+                    <div class="colum"> 
+                    <img src="Resurse/img/blush.gif" alt="Blush" title="Blush" class="responsive" style="max-width: 200px;height: auto;">
+                    <img src="Resurse/img/1661758633d36d4613fd9b13467eff44ac69c25d6e_thumbnail_900x.webp" class="responsive" style="max-width: 200px;height: auto;">
+                    <img src="Resurse/img/16667671035e21587a75d60007f649cb828a1188be_thumbnail_900x.webp" class="responsive" style="max-width: 200px;height: auto;">
+               <figcaption>Blush</figcaption>
+                    </div>
+                </div>
+            </figure>
+            <details>
+                <summary>Detalii</summary>
+            <p>
+                <i><b>RADIANT BLUSH by Kyra Cosmetics</b></i> Formula acestui blush este bogată în <em>pigmenți</em>, oferind o culoare intensă și durabilă. Este îmbogățită cu ingrediente naturale, precum <em> uleiul de jojoba și extractul de aloe vera </em>, pentru a hidrata și hrăni pielea.
+            </p>
+            <p>
+                <i><b>Noul nostru blush piersică</b></i> este potrivit pentru toate tipurile de piele, iar nuanța sa caldă este perfectă pentru a da un aspect <em>luminos și sănătos obrajilor</em>. Este ambalat într-un recipient compact și ușor, ușor de transportat și de folosit în orice moment al zilei.
+            </p>
+            </details>
+        </section>
+        </section>
+    <section id="blog">
+        <h2>
+            BLOG
+        </h2>
+        <article>
+            <h3>Cum să obții un machiaj perfect în 5 pași simpli</h3>
+            <p><b>Dacă vrei să obții un machiaj perfect, urmează acești cinci pași:</b></p>
+            <ol>
+              <li>Curăță tenul și aplică o bază pentru machiaj</li>
+              <li>Aplică fondul de ten și corectorul, dacă este nevoie</li>
+              <li>Aplică fardul de obraz și iluminatorul</li>
+              <li>Aplică fardul de pleoape și mascara</li>
+              <li>Aplică rujul sau luciul de buze</li>
+            </ol>
+            <p>Dacă urmezi acești pași și folosești produse de calitate, vei obține un machiaj <em>impecabil</em> în cel mai scurt timp posibil.</p>
+            
+                <div class="container">
+                    <div class="rand-video">
+                        <div class="coloana-video1">
+                    <div class="links">
+                        <a href="https://www.youtube.com/embed/gq4K9QtYXI4" target="ifr-video">Tutorial I</a>
+               
+                        <a href="https://www.youtube.com/embed/xZuytMLbRDE" target="ifr-video" >Tutorial II</a>
+                        <a href="https://www.youtube.com/embed/ggzr-OFx1Bw" target="ifr-video" >Tutorial III</a>
+                    </div>
+                </div>
+                        <div class="coloana-video">
+                    <div class="tabs">
+                        <iframe name="ifr-video" src="https://www.youtube.com/embed/gq4K9QtYXI4" width="560" height="315" frameborder="0" 
+                        allow="autoplay;  picture-in-picture" allowfullscreen style="border-style: solid; border-color:#D6B7AE; border-width: 5px; "></iframe>
+                    </div>
+                        </div>
+            </div>
+            </div>
+          </article>
+          <article>
+            <h3>Cum să alegi culoarea corectă pentru fondul de ten !</h3>
+            <figure>
+                <img src="Resurse/img/Culori" alt="Culori" title="Paleta culori" class="responsive" style="max-width: 200px;height: auto;">
+                <figcaption>Paletă culori fond de ten</figcaption>
+            </figure>
+            <a href="Resurse/img/Culori" download>Link descarcare paleta de culori</a>
+            <p><dfn>Fondul de ten </dfn> un produs cosmetic folosit pentru a uniformiza și a acoperi imperfecțiunile tenului. Acesta este disponibil în diverse texturi, culori și finisaje și poate fi ales în funcție de nevoile fiecărei persoane. Fondul de ten poate fi aplicat cu ajutorul degetelor, unei pensule sau unei burete de machiaj și este adesea utilizat în cadrul unui ritual de îngrijire și machiaj al tenului. Scopul principal al fondului de ten este de a crea o bază uniformă și omogenă pentru machiajul ulterior, dar poate fi folosit și singur pentru a crea un aspect mai natural și curat al tenului.</p>
+            <p>Alegerea culorii potrivite pentru fondul de ten poate fi dificilă, mai ales dacă nu știi exact care este nuanța ta de ten. Iată câteva sfaturi care te pot ajuta:</p>
+            <ul>
+              <li>Verifică culoarea pe gât și nu pe față, pentru că pielea de pe față poate avea o altă culoare decât cea de pe gât</li>
+              <li>Alege o nuanță mai deschisă dacă tenul tău are subton rece și o nuanță mai închisă dacă are subton cald</li>
+              <li>Alege un fond de ten care se potrivește cu tipul tău de piele (grasă, uscată, mixtă)</li>
+            </ul>
+            <p>Dacă nu ești sigură de alegerea făcută, încearcă să testezi mai multe nuanțe până găsești cea potrivită.</p>
+            <details>
+                <summary>Vreau să aflu mai multe life hack-uri !</summary>
+                <p>
+                    În final, încurajăm utilizatorii să testeze și să încerce mai multe produse, până când găsesc fondul de ten potrivit pentru nevoile lor individuale.
+    
+                    Opiniile cu privire la alegerea corectă a fondului de ten pot varia în funcție de experiențele personale și de preferințele individuale <a href="https://www.cosmopolitan.com/style-beauty/beauty/a32332790/how-to-choose-foundation-for-your-skin-type/"><i>( Secretele din spate )</i></a> În general, oamenii sunt de acord că alegerea fondului de ten potrivit este importantă pentru a obține un aspect natural și pentru a proteja sănătatea pielii.
+                    <br>
+                    Kyra Cosmetics:  <q>Unele persoane cred că textura și formula fondului de ten sunt cele mai importante aspecte de luat în considerare, în timp ce alții cred că nuanța este cea mai importantă. Există și persoane care cred că SPF-ul și ingredientele sunt factori cheie în alegerea unui fond de ten.</q>
+                    <br>
+                    Client : <q>Există discuții în comunitatea de beauty cu privire la alegerea corectă a fondului de ten în funcție de tonul de piele și subtonul acestuia. Unele persoane cred că este important să identifici tonul și subtonul pielii și să alegi un fond de ten care se potrivește perfect cu acestea.</q>
+                 </p>
+            </details>
+            <details>
+                <summary>Imporțanța formulei descoperită de cercetători ! </summary>
+                <p>
+                    Această formulă calculează nivelul de protecție solară (SPF) oferit de un fond de ten în funcție de <abbr title="FACTORUL DE PROTECTIE SOLARĂ">FPS</abbr> al produsului. De exemplu, un fond de ten cu un <abbr title="FACTORUL DE PROTECTIE SOLARĂ">FPS</abbr> de 30 ar oferi o protecție solară de SPF 3.
+                    <br>
+                    Această formulă poate fi utilă pentru persoanele care doresc să aleagă un fond de ten cu o protecție solară adecvată. În general, se recomandă utilizarea unui fond de ten cu SPF de cel puțin 30 pentru a proteja pielea împotriva radiațiilor <abbr title="ULTRAVIOLETE">UV</abbr> dăunătoare. Utilizarea unei formule matematice simple pentru a calcula SPF-ul poate ajuta utilizatorii să ia o decizie informată cu privire la produsul de make-up pe care îl achiziționează.
+                    <br>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                          <mi>SPF</mi>
+                          <mo>=</mo>
+                          <mi>FPS</mi>
+                          <mo>/</mo>
+                          <mn>10</mn>
+                        </mrow>
+                      </math>
+                </p>
+            </details>
+            <br><br>
+            <div class="links">
+                <a href="https://www.youtube.com/embed/vuRdMAJwTak" target="ifr-video1">Videoclip 1</a>
+            </div>
+            <div class="tabs1">
+                <div class="container1">
+                     <iframe width="624" height="351" name="ifr-video1" src="https://www.youtube.com/embed/vuRdMAJwTak" title="How To Find Your BEST Foundation Shade • easy for makeup beginners!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+          </article>
+        </section>
+        
+        <section id="promo">
+        <h2>Promoții</h2>
+        
+        <div class="row">
+          <div class="column">
+            <img src="Resurse/img/scrub.png" alt="scrub" title="Scrub" style="width: 100%">
+            <details>
+                <summary>Reducere de până la -40 % !</summary>
+                <p>
+                    <b>Promoție</b><s>59.99 ron </s> <ins
+                    style="font-weight:bold; text-decoration:none;">46.99 ron</ins>.
+                </p>
+            </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/eyeliner.png" alt="eyeliner" title="Eyeliner" style="width:100%">
+            <details>
+                <summary>Reducere de până la -40 % !</summary>
+                <p>
+                    <b>Promoție</b><s>69.99 ron </s> <ins
+                    style="font-weight:bold; text-decoration:none;">46.99 ron</ins>.
+                </p>
+            </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/fard.png" alt="fard" title="Title" style="width:100%">
+            <details>
+                <summary>Reducere de până la -40 % !</summary>
+                <p>
+                    <b>Promoție</b><s>99.99 ron </s> <ins
+                    style="font-weight:bold; text-decoration:none;">63.99 ron</ins>.
+                </p>
+            </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/glitter.png" alt="glitter" title="Glitter" style="width:100%">
+            <details>
+                <summary>Reducere de până la -40 % !</summary>
+                <p>
+                    <b>Promoție</b><s>30.99 ron </s> <ins
+                    style="font-weight:bold; text-decoration:none;">16.99 ron</ins>.
+                </p>
+            </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/gloss.png" alt="gloss" title="Gloss" style="width:100%">
+            <details>
+            <summary>Reducere de până la -20 % !</summary>
+            <p>
+                <b>Promoție</b><s>25.99 ron </s> <ins
+                style="font-weight:bold; text-decoration:none;">16.99 ron</ins>.
+            </p>
+            </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/portfard.png" alt="portfard" title="Portfard" style="width:100%">
+            <details>
+            <summary>Reducere de până la -40 % !</summary>
+            <p>
+                <b>Promoție</b><s>89.99 ron </s> <ins
+                style="font-weight:bold; text-decoration:none;">65.99 ron</ins>.
+            </p>
+            </details>
+          </div>
+          </div>
+        </section>
+
+        <section id="bestsellers">
+            <h2>Bestsellers</h2>
+        
+        <div class="row">
+          <div class="column">
+            <img src="Resurse/img/blush.png" alt="Blush" title="Blush" style="width: 100%">
+            <details>
+                <summary>Descriere blush</summary>
+                <p>
+                    Acesta este disponibil în diverse nuanțe și texturi și poate fi ales în funcție de tonul pielii și preferințe.
+                </p>
+                </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/Solutie.png" alt="Solutie" title="Solutie de curatat" style="width:100%">
+            <details>
+                <summary>Descriere Soluție curățare pensule </summary>
+                <p>
+                    Soluția de curățat pensule este un produs cosmetic folosit pentru a curăța și steriliza pensulele de machiaj. Aceasta este concepută pentru a îndepărta reziduurile de machiaj, murdăria și bacteriile de pe pensulele de machiaj
+                </p>
+                </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/stick.png" alt="Stick" title="Stick de conturare" style="width:100%">
+            <details>
+                <summary>Descriere stick contur</summary>
+                <p>
+                    Stick-ul de contur este un produs cosmetic conceput pentru a ajuta la definirea și sculptarea feței prin crearea unor umbre și lumini artificiale. 
+                </p>
+                </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/rosu.png" alt="rosu" title="Balsam de buze" style="width:100%">
+            <details>
+                <summary>Descriere balsam </summary>
+                <p>
+                    Balsamul de buze este un produs cosmetic conceput pentru a hidrata și proteja buzele. Acesta este disponibil într-o varietate de arome și nuanțe și poate fi ales în funcție de preferințe. 
+                </p>
+                </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/iluminator.png" alt="iluminator" title="Iluminator" style="width:100%">
+            <details>
+                <summary>Descriere iluminator</summary>
+                <p>
+                    Iluminatorul este un produs cosmetic conceput pentru a adăuga un efect luminos pielii și pentru a evidenția anumite zone ale feței.
+                </p>
+                </details>
+          </div>
+          <div class="column">
+            <img src="Resurse/img/Beauty.png" alt="Beauty" title="Beauty Blender" style="width:100%">
+            <details>
+                <summary>Descriere Beauty Blender</summary>
+                <p>
+                    Beauty blender-ul este o burete special conceput pentru aplicarea machiajului pe față. Acesta are o formă de ou și este fabricat din spumă moale și netedă, care permite o aplicare uniformă și fără pete a produselor cosmetice pe piele.
+                </p>
+                </details>
+          </div>
+        </div>
+    </section>
+    </section>
+    </div>
+</main>
+   <%- include("../fragmente/footer.ejs") %>
+</body>
+</html>     
+       
+       
+      
+      
+      
+      
