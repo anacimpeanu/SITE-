@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+
+<head>
+    <title>KYRA COSMETICS</title>
+
+    <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
+    <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
+    <link rel="stylesheet" href="/Resurse/css/produse.css" type="text/css" />
+    <title> Kyra Cosmetics - home</title> 
+    <%- include("../fragmente/head.ejs") %>
+    <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+      
+</head>
+<body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Ingrediente: <span class="ingredient"><%- locals.prod.ingredient %> </span></p>
+                    <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
+                    <p>Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
+                    <p>Pentru tine: <span class="necesar"><%- locals.prod.necesar %> </span></p>
+                    <% function formatDate(date) { const options={ day: '2-digit' , month: 'long' ,year: 'numeric' , weekday: 'long' }; 
+                        const formattedDate=new Date(date).toLocaleDateString('ro-RO', options);
+                        const parts=formattedDate.split(' ');
+                        const day = parts[1];
+                        const month=parts[2].charAt(0).toUpperCase() + parts[2].slice(1);
+                        const year=parts[3];
+                        const weekday=parts[0].split(',')[0].charAt(0).toUpperCase() + parts[0].split(',')[0].slice(1);
+                        return `${day}-${month}-${year} [${weekday}]`; } %>
+                     <p class=" data">Data: <time datetime="<%- prod.data_adaugare %>">
+                        <span class="val-data"><%- formatDate(prod.data_adaugare) %></span></time></p>
+                    <figure class="imag-produs">
+                        <img  src="/Resurse/img/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>  
+                
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

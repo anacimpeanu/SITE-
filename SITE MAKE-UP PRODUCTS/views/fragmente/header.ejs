@@ -1,53 +1,75 @@
+<script src="/Resurse/js/tema.js"></script>
 <header>
     <div class="banner">
         Acesta este un proiect școlar!
       </div>
+
         <h1>KYRA COSMETICS </h1>
+          <ul>
+              <li>
+                <button class="btn btn-outline-primary theme" id="normaltheme">Normal</button>
+                <button class="btn btn-outline-dark theme" id="darktema">Dark</button>
+                <button class="btn btn-outline-info theme" id="bluetema">Blue</button>
+              </li>
+          </ul>
         <nav>
             <label id="hamburger" for="ch-menu">
                 <img src="Resurse/img/clipart365828.png"  alt="menu">
             </label>
            <input id="ch-menu" type="checkbox">
           <ul class="meniu">
-            <li>
-                <div id="acasa"><i class="fa-solid fa-house"></i>Acasa</div>
-                <div id="casuta"><i class="fa-solid fa-house"></i></div>
-              <ul>
-                <li><a href="#noutati">Noutăți</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#promo">Promoții</a></li>
-                <li><a href="#bestsellers">Bestsellers</a></li>
-              </ul>
+            <li><div><a href="/home"><i class="fa-solid fa-house"></i><b class="text-acasa">Acasa</b></a></div>
+                    <ul>
+                    <li><a href="#noutati">Noutăți</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#promo">Promoții</a></li>
+                    <li><a href="#bestsellers">Bestsellers</a></li>
+                    </ul>
             </li>
-            <li><div>Produse</div>
-                <ul>
-                    <li><a href="#">Machiaj ten</a></li>
-                    <li><a href="#">Machiaj ochi</a></li>
-                    <li><a href="#">Machiaj sprancene</a></li>
-                    <li><a href="#">Machiaj buze</a></li>
-                    <li><a href="#">Palete machiaj</a></li>
-                    <li><a href="#">Seturi machiaj</a></li>
-                    <li><a href="#">Accesorii pentru machiaj</a></li>
-                    <li><a href="#">Produse pentru îngrijirea pielii</a></li>
-                </ul>
+            <li><div><a href="/produse">Produse</a></div>
+            <ul>
+            <% for (let opt of locals.optiuniMeniu) { %>
+            <li><a href="/produse?categorie=<%- opt.unnest %>"><%- opt.unnest %></a></li>
+            <% } %>
+            </ul>
             </li>
-            <li><div>Contact și servicii clienți</div>
+        
+            <li><div><a href="/contact">Contact </a></div>
                 <ul>                        
-                    <li><a href="#">Detalii locații</a></li>
-                    <li><a href="#">Formular de Contact</a></li>
-                    <li><a href="#">Întrebări frecvente</a></li>
-                    <li><a href="#">Politică retur și garanție</a></li>
+                    <li><a href="#detalii">Detalii locații</a></li>
+                    <li><a href="#formular">Formular de Contact</a></li>
+                    <li><a href="#inrebari">Întrebări frecvente</a></li>
+                    <li><a href="#retur">Politică retur și garanție</a></li>
                 </ul>
             </li>
-            <li><div>Despre noi</div>
+            <li><div><a href="/despre">Despre NOI</a></div>
                 <ul>
-                    <li><a href="#">Istorie</a></li>
-                    <li><a href="#">Echipa KYRA COSMETICS</a></li>
-                    <li><a href="#">Evenimente</a></li>
-                    <li><a href="#">Inspo</a></li>
+                    <li><a href="#istorie">Istorie</a></li>
+                    <li><a href="#echipa">Echipa KYRA COSMETICS</a></li>
+                    <li><a href="#events">Evenimente</a></li>
+                    <li><a href="#inspo">Inspo</a></li>
                 </ul>
-            
             </li>
+            <% if(locals?.utilizator?.areDreptul?.(Drepturi.vizualizareUtilizatori)) { %>
+                <li><div>Administrare</div>
+                    <ul>
+                        <li><a href="/useri">Useri</a></li>
+                        <li><a href="/grafice">Grafice</a></li>
+                        <li><a href="/comenzi">Comenzi</a></li>
+                    </ul>
+                </li>
+            <% } %>
+           <li><div><a href="/inregistrare">Inregistrare</a></div></li>
+           <% if(locals.utilizator) { %>
+                    <li><div><%- locals.utilizator.username %></div>
+                        <ul>
+                            <li><a href="/profil">Profil</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                <% } %>
+            <li><div><a href="/politica">Politica </a></div>
+            <li><div><a href="/termeni">Termeni </a></div>
         </ul>
 </nav>
 </header>

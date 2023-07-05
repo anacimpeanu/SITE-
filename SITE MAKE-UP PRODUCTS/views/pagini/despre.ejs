@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+
+<head>
+    <title>KYRA COSMETICS</title>
+
+    <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
+    <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
+    <%- include("../fragmente/head") %>
+
+</head>
+<header>
+    <%- include("../fragmente/header") %>
+</header>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      margin-left: 45px;
+      float: left;
+      width: 45%;
+      padding: 5px;
+      border: 20px solid #8f053c;
+      border-radius: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+</style>
+<main>
+    <h1>DESPRE NOI </h1>
+    <div class="despre-noi">
+        <p>Bine ați venit la KYRA COSMETICS! Suntem o echipă pasionată de frumusețe și produse cosmetice de înaltă calitate.</p>
+        <p>Avem o istorie bogată și suntem dedicați să aducem cele mai bune produse de îngrijire a pielii și machiajul de lux clienților noștri.</p>
+        <p>Echipa noastră este formată din experți în domeniu, care pun pasiune în crearea produselor noastre și în oferirea unor servicii de calitate.</p>
+        <p>Vă invităm să explorați secțiunile noastre pentru a afla mai multe despre istoria noastră, echipa noastră, evenimentele noastre și pentru a vă inspira în materie de frumusețe.</p>
+    </div>
+    <section id="echipa">
+        <h2>ECHIPA FONDATOARE KYRA COSMETICS</h2>
+        <div class="column">
+            <img src="Resurse/img/olaf.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Resurse/img/thomas.jpg"  style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Resurse/img/kyra.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Resurse/img/sasha.jpg"  style="width:100%">
+        </div>
+    </section>
+    <br>
+    <br>
+    <section id="evenimente">
+        <h1>EVENT-UL LUNII </h1>
+        <img src="Resurse/img/event.jpg"  style="width:100%">
+    </section>
+</main>
+<%- include("../fragmente/footer") %>
+</html>

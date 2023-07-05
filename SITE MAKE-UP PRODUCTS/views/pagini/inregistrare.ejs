@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        
+    <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
+    <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
+    <link rel="stylesheet" href="/Resurse/css/produse.css" type="text/css" />
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src=/resurse/js/inregistrare.js></script>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+        <% if(!locals.raspuns) { %>    
+
+			<%-include("../fragmente/formular", {action: "/inregistrare"}) %>
+        <% } %>
+        
+	<% if(locals.raspuns) { %>
+	<%- locals.raspuns+"<br/>"%>
+	<% } %>
+	<% if(locals.err) { %>
+	<%- locals.err %>
+	<% } %>
+    </div>
+</main>
+
+<footer>
+    <%- include("../fragmente/footer") %>
+</footer>
+
+</body>
+</html>

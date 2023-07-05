@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
+        <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
+        <link rel="stylesheet" href="/resurse/css/useri.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/resurse/css/contact.css" />
+        <title>Kyra Cosmetics- utilizatori</title>
+        <%- include("../fragmente/head") %>    
+    </head>
+	<body>
+			<%- include("../fragmente/header") %>
+        <style>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+            }
+    
+            .box {
+                width: calc(50% - 20px);
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+    
+            .box h2 {
+                color: #333;
+                margin-top: 0;
+            }
+    
+            .box p {
+                color: #777;
+            }
+        </style>
+		<main>
+			
+            <h1>Contact și servicii clienți</h1>
+        <section id="detalii">
+            <p>Bine ați venit la Kyra Cosmetics! Suntem aici pentru a vă oferi asistență și informații despre produsele noastre.</p>
+            <div class="container">
+            <div class="box">
+            <h2>Detalii locații</h2>
+            <p>Consultați lista noastră de locații pentru a găsi un magazin Kyra Cosmetics în apropierea dumneavoastră.</p>
+            </div>
+        </section>
+            
+        <section id="intrebari">
+            <div class="box">
+            <h2>Întrebări frecvente</h2>
+            <h3>Cât timp durează să primesc comanda mea?</h3>
+            <p>Timpul de livrare depinde de locația dumneavoastră și de opțiunea de livrare selectată. De obicei, procesăm și livrăm comenzile în termen de 1-3 zile lucrătoare.</p>
+    
+        
+            <h3>Pot returna un produs dacă nu sunt mulțumit/ă de el?</h3>
+            <p>Da, avem o politică de retur flexibilă. Vă rugăm să consultați pagina noastră de Politică de retur și garanție pentru detalii despre procesul de returnare și condițiile aplicabile.</p>
+
+            <h3>Produsele Kyra Cosmetics sunt testate pe animale?</h3>
+            <p>Nu, suntem mândri să afirmăm că toate produsele noastre sunt cruelty-free și nu sunt testate pe animale.</p>
+
+            <h3>Acceptați plăți prin card bancar?</h3>
+            <p>Da, acceptăm plăți prin card bancar. Acceptăm majoritatea cardurilor de credit și debit, inclusiv Visa, MasterCard și American Express.</p>
+            
+                <h3>Pot returna un produs dacă nu sunt mulțumit/ă de el?</h3>
+                <p>Da, avem o politică de retur flexibilă. Vă rugăm să consultați pagina noastră de Politică de retur și garanție pentru detalii despre procesul de returnare și condițiile aplicabile.</p>
+            </div>
+            </section>
+            <section id="retur">
+            <div class="box">
+            <h2>Politică retur și garanție</h2>
+            <p>Aflați mai multe despre politica noastră de retur și garanție. Vă asigurăm că ne străduim să oferim servicii excelente clienților noștri.</p>
+			</div>
+            </div>
+            </section>
+            <section id="formular">
+            <h2>Formular de Contact</h2>
+            <p>Dacă aveți întrebări, sugestii sau feedback, vă rugăm să completați formularul de contact de mai jos. Vă vom răspunde în cel mai scurt timp posibil.</p>
+
+            <p>Mesajele nu sunt moderate , 
+                așa că, pentru sănătatea dumneavoastră mentală vă sfătuim călduros să nu citiți ce e scris sub formularul de contact. 
+            </p>
+
+            <form method="post" action="/contact">
+                <label>Mesajul dumneavoastră:<br/>
+                    <textarea cols="30" rows="5" name="mesaj" placeholder="Scrieți tot ce aveți pe suflet!"></textarea>
+                </label><br/>
+                <input type="submit" value="Trimite mesajul!">
+            </form>
+			</section>
+		</main>
+		
+		<%- include("../fragmente/footer") %>
+		
+	</body>
+</html>

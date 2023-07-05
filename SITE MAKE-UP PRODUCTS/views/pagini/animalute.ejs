@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>
+            EXAMEN TW
+        </title>
+        <script type="text/javascript" src=/Resurse/js/animalute.js></script>
+        <link rel="stylesheet" href="/Resurse/css/general.css" type="text/css" />
+    </head>
+    <body>
+        <main>
+            <p id="jucarii_sterse"></p>
+            <button id="reseteaza_ls">Sterge localStorage</button>
+
+          
+            <div class="select-wrapper">
+                <select id="greutate-select" multiple size="2">
+                    <option value="usor">ușor</option>
+                    <option value="greut">greuț</option>
+                    <option value="greu">greu</option>
+                    <option value="gabarit">gabarit depășit</option>
+                </select>
+            </div>
+            <select id="ordine_sortare">
+                <option value="1">ascendent</option>
+                <option value="-1">descendent</option>
+            </select>
+    
+            <button id="sorteaza">Sorteaza</button>
+            <p>
+            <button id="filtrare">Filtreaza</button> 
+    
+            
+            </p>  
+           
+            <form method="post" action="jucarii_5">
+                <select name="email" multiple size="3">
+                    <option value="irina.ciocan@unibuc.ro">Profa!!!</option>
+                    <option value="irina.ciocan@gmail.com">Tot profa!!!</option>
+                    <option value="profprofprof007@gmail.com">James Bond</option>
+                </select>
+                <input type="text" id="ascuns" name="ascuns" style="display: none;">
+                <input type="submit" value="trimite mail">
+            </form>
+            <section id="produse">
+                <h2>Produse</h2>
+                <div class="grid-produse">
+                    <% for (let i = 0; i < 15 && i < locals.produse.length; i++) { %>
+                        <% let prod = locals.produse[i]; %>
+
+                        <article class="anm" id="a<%- prod.id %>">
+                            <h2 class="titlu">Nume: <%- prod.nume%></h2>
+                            <h3 class="<%- prod.specie %>">
+                                <% if (prod.specie === 'papagal') { %>
+                                    pasare
+                                <% } else { %>
+                                    mamifer
+                                <% } %>
+                            </h3>
+                            
+                            <ul class="culori">
+                                <% 
+                                 prod.culori.sort(function(a,b){
+                                    return b.length-a.length;
+                                 })   
+                                    
+                                for (let culoare of prod.culori) { %>
+                                    <li><%- culoare %> </li>
+                                <% } %>
+                            </ul>
+                           
+                            <p class="varsta"> Varsta :<span class="val-varsta"><%- prod.varsta%></span></p>
+                           
+                            <p class="greutate">Greutate:<span class="val-greutate" ><%- prod.greutate%></span></p>
+                            <%
+                            zile=["duminica","luni","marti","miercuri","joi","vineri","sambata"]
+                            luni=["ianuarie", "februarie","martie","aprilie","mai","iunie","iulie"];
+                            //luni(06/06/2022, 10:05:22)
+                            sir_data=`${prod.data_adaugare.getDay()}${prod.data_adaugare.getDate()}-${luni[prod.data_adaugare.getMonth()]}-${prod.data_adaugare.getFullYear()}, ${prod.data_adaugare.getHours()}:${prod.data_adaugare.getMinutes()}:${prod.data_adaugare.getSeconds()}`
+                            sir_date_time=`${prod.data_adaugare.getFullYear()}-${prod.data_adaugare.getMonth()}-${prod.data_adaugare.getDate()} ${prod.data_adaugare.getHours()}:${prod.data_adaugare.getMinutes()}:${prod.data_adaugare.getSeconds()})`;
+                            %>
+                            <p><time datetime="<%- sir_date_time %>"><%- sir_data %></time></p>
+                            <button name="<%-prod.nume %>" id="b<%-prod.id %>" class="sterge">Sterge</button>
+                        </article>
+                        
+                    <% }%>
+                </div>
+            </section>
+
+        </main>
+    </body>
+    </html>

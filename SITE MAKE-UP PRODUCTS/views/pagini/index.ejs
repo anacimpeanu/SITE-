@@ -7,15 +7,17 @@
 
     <meta name="keywords" content=" Machiaj , Produse make-up, Cosmetice , Promotie, Tendinte de frumusete, Tutoriale machiaj, Instrumente de machiaj , Reduceri , Bestsellers, HTML, taguri">
     <meta name="description" content="Proiect web - Kyra Cosmetics . Produse . Detalii produse . Contact si servicii cu clientii . Despre noi . Comenzi online . Reduceri de sfarsit de sezon . Taguri ">
-    <%- include("../fragmente/head.ejs") %>
+    <%- include("../fragmente/head") %>
+  
     <style>
         * {
           box-sizing: border-box;
         }
         
         .column {
+          margin-left: 45px;
           float: left;
-          width: 50%;
+          width: 45%;
           padding: 5px;
         }
         
@@ -31,11 +33,29 @@
 
 <body>
 
-    <%- include("../fragmente/header.ejs") %>
-    
+    <%- include("../fragmente/header") %>
 <main>
     <div id="grid-pagina">
         <section id="zona1">
+            <% if(!locals.utilizator) { %>
+                <form id="form_inreg"  method="post" class="date"  action="/login"  enctype="multipart/form-data">
+                    <p>
+                        <label>
+                            Username: <input type="text" name="username" id="inp-username" value="" required pattern="[A-Za-z0-9]+">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Parola: <input id="parl" type="password" required  name="parola" value="">
+                        </label>
+                    </p>
+                    <p><input type="submit" value="Logare"></p>
+                </form>
+            <% }  %>
+                <p><%- locals.mesajLogin %></p>
+              
+                
+
             <p>
                 Ip: <%- locals.ip %>
             </p>
@@ -98,37 +118,45 @@
          </section>
          <section id="zona3">
             <div class="text-box">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quos nemo quod aut atque a quo explicabo ex reiciendis tempore error possimus ipsum hic magnam in iste cupiditate autem doloremque.</p>
+            <div id="my-text">Kyra Cosmetics este un brand de produse cosmetice fondat în 2018, care se concentrează pe produse de înaltă calitate, vegane și cruelty-free. Acestea includ o gamă largă de produse, cum ar fi rujuri, farduri de ochi, blush-uri, pudre, fonduri de ten, pensule și multe altele. Kyra Cosmetics se angajează să ofere produse cosmetice care nu numai că fac utilizatorii să arate bine, dar care sunt și bune pentru mediul înconjurător și pentru animale.
+
+                Brandul a devenit popular în rândul utilizatorilor de cosmetice, mai ales datorită calității produselor lor și a faptului că acestea sunt vegane și cruelty-free, ceea ce se potrivește cu tendința crescută de a folosi produse cosmetice sustenabile și etice. De asemenea, Kyra Cosmetics este activ pe rețelele de socializare, precum Instagram, unde se promovează produsele lor și se interacționează cu clienții și fanii brandului.
+            </div>
             </div>
         </section>
         <section id="zona4">
             <div class="text-box">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem totam, quod nobis laborum nesciunt natus aspernatur numquam accusantium beatae incidunt aut tempora enim labore maxime eos delectus voluptas illum cupiditate.</p>
+            <p>Kyra Cosmetics este o alegere populară datorită calității produselor lor, varietății extinse de produse și formulelor inovatoare.</p>
             </div>
          </section>
         <section id="zona5">
-             <h2>TEXT</h2>
+             <h2>OFERTE</h2>
     </section>
     <section id="zona6">
-        <h2>TEXT</h2>
+        <h2>SUMMER</h2>
     </section>
     <section id="zona7">
-        <h2>TEXT</h2>
+        <h2>SALA</h2>
     </section>
     <section id="zona8">
-        
     <section id="noutati">
         <h2>
             Noutăți
         </h2>
+        
         <video id="promo" controls autoplay loop poster="/Resurse/img/studio.png">
             <source src="/resurse/video/promo.mp4" type="video/mp4">
             <source src="/resurse/video/promo.mov" type="video/mov">
             <track label="Romanian" kind="subtitles" srclang="ro" src="/resurse/video/subt-romana.vtt" default>
             <track label="English" kind="subtitles" srclang="en" src="/resurse/video/subt-engleza.vtt">
         </video>
+        <section id="galerie-statica">
+            <h2>Galerie</h2>
+            <%- include("../fragmente/galerie-statica.ejs") %>
+        </section>
         <section>
             <h3>Acoperire fără pete</h3>
+           
             <p>În această secțiune vei găsi cele mai noi informații despre noua pensulă de aplicare fond de ten 100% fabricata din materiale bio.</p>
             <figure>
                 <div class="row">
@@ -162,6 +190,7 @@
                <figcaption>Blush</figcaption>
                     </div>
                 </div>
+                
             </figure>
             <details>
                 <summary>Detalii</summary>
@@ -174,11 +203,16 @@
             </details>
         </section>
         </section>
+
     <section id="blog">
+        <video autoplay muted loop id="myVideo">
+            <source src="Resurse/video/skin.mp4" type="video/mp4" >
+          </video>
         <h2>
             BLOG
         </h2>
         <article>
+            <hr>
             <h3>Cum să obții un machiaj perfect în 5 pași simpli</h3>
             <p><b>Dacă vrei să obții un machiaj perfect, urmează acești cinci pași:</b></p>
             <ol>
@@ -210,12 +244,21 @@
             </div>
           </article>
           <article>
-            <h3>Cum să alegi culoarea corectă pentru fondul de ten !</h3>
-            <figure>
-                <img src="Resurse/img/Culori" alt="Culori" title="Paleta culori" class="responsive" style="max-width: 200px;height: auto;">
-                <figcaption>Paletă culori fond de ten</figcaption>
+            <hr>                        
+            <div id ="text">
+                GOOD TO KNOW
+                <div id = "text-reflectat">
+                    GOOD TO KNOW
+                </div>
+            </div>
+            <picture>
+                <source srcset="Resurse/img/fond-small.png" media="(max-width: 600px)">
+                <source srcset="Resurse/img/fond-medium.png" media="(max-width: 1200px)">
+                <source srcset="Resurse/img/fond.png" style="padding-left: 20%;">
+                <img src="Resurse/img/fond.png" alt="A responsive image" >
+              </picture>
+              
             </figure>
-            <a href="Resurse/img/Culori" download>Link descarcare paleta de culori</a>
             <p><dfn>Fondul de ten </dfn> un produs cosmetic folosit pentru a uniformiza și a acoperi imperfecțiunile tenului. Acesta este disponibil în diverse texturi, culori și finisaje și poate fi ales în funcție de nevoile fiecărei persoane. Fondul de ten poate fi aplicat cu ajutorul degetelor, unei pensule sau unei burete de machiaj și este adesea utilizat în cadrul unui ritual de îngrijire și machiaj al tenului. Scopul principal al fondului de ten este de a crea o bază uniformă și omogenă pentru machiajul ulterior, dar poate fi folosit și singur pentru a crea un aspect mai natural și curat al tenului.</p>
             <p>Alegerea culorii potrivite pentru fondul de ten poate fi dificilă, mai ales dacă nu știi exact care este nuanța ta de ten. Iată câteva sfaturi care te pot ajuta:</p>
             <ul>
@@ -265,10 +308,13 @@
             </div>
           </article>
         </section>
-        
+        <div id="imagine">
+            <img src="Resurse/img/ceva.jpg" alt="ceva" title="Scrub"style="max-width: 100%; height:auto;">
+        </div>
         <section id="promo">
-        <h2>Promoții</h2>
-        
+            <div id="container-moving-text">
+                <h2 id="moving-text">Promotii </h2>
+            </div>
         <div class="row">
           <div class="column">
             <img src="Resurse/img/scrub.png" alt="scrub" title="Scrub" style="width: 100%">
@@ -390,17 +436,19 @@
                     Beauty blender-ul este o burete special conceput pentru aplicarea machiajului pe față. Acesta are o formă de ou și este fabricat din spumă moale și netedă, care permite o aplicare uniformă și fără pete a produselor cosmetice pe piele.
                 </p>
                 </details>
-          </div>
+            </div>
         </div>
+        
     </section>
+   
     </section>
     </div>
 </main>
-   <%- include("../fragmente/footer.ejs") %>
+   <%- include("../fragmente/footer") %>
 </body>
 </html>     
        
-       
+
       
       
       
