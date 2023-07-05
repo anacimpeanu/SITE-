@@ -1,22 +1,42 @@
 
 body{
     --text_color:black;
-    --grid_background: black;
+    --grid_background: rgb(0, 0, 0);
     --main_color:#F7DAC8;
     --highlight_color:#D6B7AE;
     --nude1:#ECCCCA;
     --nude2:#eee1d8;
     --pink1:#cb5d82;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     padding: 2px;
+    overflow-x: hidden;
+    background-image: url(/resurse/img/peach.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: background-image 10s;
+    animation-name: change-bg;
+    animation-duration: 50s; /* timpul de schimbare a imaginii */
+    animation-iteration-count: infinite;
+
 }
 
 header{
     background-color: black;
 }
-main{
-    background-color: var(--main_color);
+
+
+@keyframes change-bg {
+  0% {
+    background-image: url(/resurse/img/peach.jpg);
+  }
+  50% {
+    background-image: url(/resurse/img/fundal.jpg);
+  }
+  100% {
+    background-image: url(/resurse/img/peach.jpg);
+  }
 }
+
 footer{
     background-color: black;
 }

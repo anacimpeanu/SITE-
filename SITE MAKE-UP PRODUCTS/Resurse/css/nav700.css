@@ -1,49 +1,45 @@
-#hamburger, #ch-menu{
-    display:none;
-}
-body{
-    --inaltime-meniu:40px;
-    --latime-buton:100%;
+#hamburger, #ch-menu {
+  display: none;
 }
 
-#hamburger{
-    display: block;
-    margin:0;
-    width: 30px;
-    height: 25px;
-
+body {
+  --inaltime-meniu:40px;
+  --latime-buton:100%;
 }
 
-#hamburger>img{
-    width: 30px;
-    height: 25px;
-    display: block;
-    margin:0;
+#hamburger {
+  display: block;
+  margin: 0;
+  width: 30px;
+  height: 25px;
 }
 
-ul.meniu{
-    display: none;
-    
+#hamburger > img {
+  width: 30px;
+  height: 25px;
+  display: block;
+  margin: 0;
 }
 
-#ch-menu:checked+ul.meniu{
-    display: block;
-    animation-name: animatie_meniu;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    transform-origin: center top;
+ul.meniu {
+  display: none;
 }
 
-
-
-@keyframes animatie_meniu{
-    0%{
-        letter-spacing:-3px;
-    }
-    100%{
-        letter-spacing: 1px;
-    }
+#ch-menu:checked + ul.meniu {
+  display: block;
+  animation-name: animatie_meniu;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: center top;
 }
 
+@keyframes animatie_meniu {
+  0% {
+    letter-spacing: -3px;
+  }
+  100% {
+    letter-spacing: 1px;
+  }
+}

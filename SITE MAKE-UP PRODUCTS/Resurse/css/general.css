@@ -5,11 +5,10 @@
 table {
     margin: auto;
     border-collapse:separate;
-    border:solid black 1px;
     border-radius:6px;
     -moz-border-radius:6px;
-    width: 500px;
-    height:300px;
+    width: 200px;
+    height:200px;
 }
 .par{
 background-color: var(--nude1);
@@ -352,4 +351,360 @@ a[href^="http"]{
   a:active {
     outline: 2px solid white;
   }
+  /* ceva bara delimitatoare */
+  hr {
+    height: 10px;
+    background: repeating-linear-gradient(to bottom, #d4c1b1, #cea788 2px, #000000 2px,  #000000 4px);
+    background-size: 1px 25%;
+    border: none;
+    border-radius: 5px;
+    margin: 0 ;
+    width: 100%;
+  }
+
+
+  /*efect css cu duotone */
+  #imagine{
+    position:relative;
+    background-image:url("./Resurse/img/ceva.jpeg");
+    background-size:cover;
+	  width:100%; 
+	  height: auto;
+    transition:all 2s ease-in-out;
+	 
+}
+#imagine:before,
+#imagine:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  transition:all 2s ease-in-out;
+}
+
+#imagine:before {
+  background-color: rgb(216, 203, 197); /* înlocuiți cu culoarea pentru primul ton */
+  mix-blend-mode: multiply;
+}
+
+#imagine:after {
+  background-color: rgb(239, 228, 228); /* înlocuiți cu culoarea pentru al doilea ton */
+  mix-blend-mode: darken;
+}
+
+
+#imagine:hover{
+  filter: grayscale(100%);
+  transition: all 2s ease-in-out;
+}
+#imagine:hover:after, #imagine:hover:before{
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+
+/* text care se plimba */
+
+#container-moving-text {
+  width: 100%;
+  overflow: hidden;
+  color: black;
+}
+
+#moving-text {
+  animation: scroll-animation 10s linear infinite;
+}
+
+@keyframes scroll-animation {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+#text-reflectat{
+	position:relative;
+  text-align: center;
+	left:0;
+	top:100%;
+	transform-origin:0 0;
+	/*conetaza ordinea transformarilor!*/
+	transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px,-25px); 
+  opacity:0.55;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+
+  -webkit-mask-image: repeating-radial-gradient(circle 60px, transparent, transparent 2px, black 3px, black 5px);
+  mask-image: repeating-radial-gradient(circle 60px, grey, grey 2px, black 3px, black 5px);
+  /* Definim o animație care schimbă poziția gradientului */
+  transition: all 0.3s ease-in-out;
+}
+#text:hover #text-reflectat {
+  /* Definim o animație care schimbă poziția gradientului doar la hover */
+  -webkit-animation: unduire 1s ease-in-out infinite;
+  animation: unduire 1s ease-in-out infinite;
+}
+@-webkit-keyframes unduire {
+  0% {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 0 -10px;
+    mask-position: 0  -10px;
+  }
+}
+
+@keyframes unduire {
+  0% {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 0 -40px;
+    mask-position: 0 -40px;
+  }
+}
+
+#text{	
+	position:relative;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+
+}
+
+#text, #text-reflectat{
   
+	font-size:50px;
+	line-height:50px;
+	font-weight: bold;
+}
+
+#my-text {
+  column-count: 2;
+  column-rule: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  #my-text {
+    column-count: 1;
+  }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  p::selection {
+    background-color: pink;
+    color: black;
+}
+.theme-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 3rem;
+}
+
+.theme-wrapper .custom-switch {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  /* Adjust this value to create spacing between the switch and the icons */
+}
+
+
+
+.banner-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  z-index: 200;
+}
+
+.ban {
+  background-color: rgb(239, 203, 209);
+  border: 1px purple solid;
+  color: #c75d7b;
+  opacity: 0;
+  animation: bannerAnimation 5s forwards;
+}
+@keyframes bannerAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    background-color: rgb(239, 203, 209);
+    font-size: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+    background-color: pink/* Culoarea dorită conform schemei cromatice alese pentru site */;
+    font-size:20px /* Dimensiunea literelor dorită în funcție de lățimea ecranului */;
+  }
+}
+/* Stiluri pentru ecrane medii */
+@media (max-width: 768px) {
+  .ban {
+    opacity: 0.75;
+    font-size: 16px; /* Dimensiunea literelor dorită pentru ecrane medii */
+    animation: none; /* Dezactivăm animația pentru ecrane medii */
+  }
+}
+
+/* Stiluri pentru ecrane mici */
+@media (max-width: 576px) {
+  .ban {
+    opacity: 0.75;
+    font-size: 14px; /* Dimensiunea literelor dorită pentru ecrane mici */
+    animation: none; /* Dezactivăm animația pentru ecrane mici */
+  }
+}
+
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-row-gap:15px;
+    grid-column-gap:5px;
+}
+
+.grid-produse .anm{
+    border-radius: 2em;
+    box-shadow: 0px 0px 0.8rem grey;
+    overflow: hidden;
+}
+
+.anm:nth-child(4n+1),
+.anm:nth-child(4n+3) {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+
+.anm:nth-child(4n+2),
+.anm:nth-child(4n+4) {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+
+.anm:nth-child(4n+5),
+.anm:nth-child(4n+7) {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+.anm:nth-child(4n+6),
+.anm:nth-child(4n+8) {
+  grid-row-start: 4;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+.anm:nth-child(4n+9),
+.anm:nth-child(4n+11) {
+  grid-row-start: 5;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+.anm:nth-child(4n+10),
+.anm:nth-child(4n+12) {
+  grid-row-start: 6;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+.anm:nth-child(4n+13),
+.anm:nth-child(4n+15) {
+  grid-row-start: 7;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+.anm:nth-child(4n+14),
+.anm:nth-child(4n+16) {
+  grid-row-start: 8;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+.anm:nth-child(4n+17),
+.anm:nth-child(4n+19) {
+  grid-row-start: 9;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+.anm:nth-child(4n+18),
+.anm:nth-child(4n+20) {
+  grid-row-start: 10;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+.anm:nth-child(4n+21),
+.anm:nth-child(4n+23) {
+  grid-row-start: 11;
+  grid-column-start: 2;
+  background-color: yellow;
+}
+.anm:nth-child(4n+22),
+.anm:nth-child(4n+24) {
+  grid-row-start: 12;
+  grid-column-start: 1;
+  background-color: #c75d7b;
+}
+
+.grid-produse .anm h3{
+    background-color: skyblue;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.anm ul{
+    list-style-type: circle;
+}
+.grid-produse .anm .specie {
+  cursor: pointer;
+}
+h3:hover~.culori{
+    animation-name: culori;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes culori {
+    33.3333%{
+      
+        background-color: red;
+        
+    }
+    66.66666%{
+        background-color: blue;
+    }
+    100%{
+        background-color: pink;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .grid-produse{
+        grid-template-columns: 1fr 1fr;  /*repeat(4,1fr)*/
+    }
+    .anm:nth-child(n){
+        background-color: white;
+    } 
+
+
+
+}
