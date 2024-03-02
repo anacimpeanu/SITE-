@@ -3,6 +3,8 @@
   <header>
     <h1>Kyra Cosmetics</h1>
   </header>
+  <img width="941" alt="image" src="https://github.com/anacimpeanu/Kyra-Cosmetics/assets/115561036/a46f4f61-711f-468e-b895-12eb2501c623">
+
   <div class="container">
     <section>
       <h2>Introduction</h2>
